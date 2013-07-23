@@ -8,6 +8,7 @@ ME=`basename $0`
 BIN=${"${0:A}"%$ME}
 ROOT=$BIN..
 
+pushd $ROOT
 git checkout master
 git pull
 git checkout -b $BRANCH
@@ -18,12 +19,11 @@ for D in `ls -d $ROOT/*/`; do
     fi;
 done;
 
-for t in "bin" $FOLDERS; do
-     git reset HEAD $t
-     git checkout -- $t
-done
+git reset HEAD $FOLDERS
+git checkout -- $FOLDERS
 
 $BIN/readme
 
 git commit -am "creating new assessment $BRANCH"
 git push
+popd
