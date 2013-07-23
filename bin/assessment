@@ -23,4 +23,4 @@ for t in "bin" $FOLDERS; do
      git checkout -- $t
 done
 
-# $BIN/readme
+$BIN/readme
