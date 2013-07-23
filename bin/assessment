@@ -1,0 +1,14 @@
+#! /usr/bin/env bash
+
+BRANCH=$1
+FOLDERS="${@:2:$#}"
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+git checkout master
+git pull
+git checkout -b $BRANCH
+git rm -r *
+git checkout -- bin
+git checkout -- $FOLDERS
+
+$DIR/readme
