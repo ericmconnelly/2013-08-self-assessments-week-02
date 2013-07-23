@@ -24,3 +24,6 @@ for t in "bin" $FOLDERS; do
 done
 
 $BIN/readme
+
+git commit -am "creating new assessment $BRANCH"
+git push
