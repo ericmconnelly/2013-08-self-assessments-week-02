@@ -1,14 +1,26 @@
-#! /usr/bin/env bash
+#! /usr/bin/env zsh
+
+#
 
 BRANCH=$1
 FOLDERS="${@:2:$#}"
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+ME=`basename $0`
+BIN=${"${0:A}"%$ME}
+ROOT=$BIN..
 
 git checkout master
 git pull
 git checkout -b $BRANCH
-git rm -r *
-git checkout -- bin
-git checkout -- $FOLDERS
 
-$DIR/readme
+for D in `ls -d $ROOT/*/`; do
+    if [ -e $D/README.md ]; then
+        git rm -r $D
+    fi;
+done;
+
+for t in "bin" $FOLDERS; do
+     git reset HEAD $t
+     git checkout -- $t
+done
+
+# $BIN/readme
