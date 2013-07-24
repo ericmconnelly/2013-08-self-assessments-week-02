@@ -32,8 +32,8 @@ for D in `ls -d $ROOT/*/`; do
 done;
 
 # reset/checkout the folders we want
-eval "git reset HEAD $FOLDERS" || exit
-eval "git checkout -- $FOLDERS" || exit
+eval "git reset HEAD $FOLDERS"
+eval "git checkout -- $FOLDERS"
 
 # generate the readme
 $BIN/readme
@@ -41,4 +41,5 @@ $BIN/readme
 # make it so
 git commit -am "creating new assessment $BRANCH"
 git push
+git checkout master
 popd
