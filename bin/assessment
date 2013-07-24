@@ -4,18 +4,15 @@
 # Creates a new assessment branch.
 #
 
-# name of the new assessment branch
+# name of the new assessment
 BRANCH=$1
 
 # folders to be included in the new assessment
 FOLDERS="${@:2:$#}"
+
 ME=`basename $0`
-
-# bin dir
-BIN=${"${0:A}"%$ME}
-
-# assessment repo root
-ROOT=$BIN..
+BIN=${"${0:A}"%$ME} # bin dir
+ROOT=$BIN.. # repo root
 
 pushd $ROOT
 git checkout master
