@@ -20,8 +20,8 @@ BIN=${"${0:A}"%$ME} # bin dir
 ROOT=$BIN.. # repo root
 
 pushd $ROOT
-git checkout master
-git pull
+git checkout master || exit
+git pull || exit
 git checkout -b $BRANCH || exit
 
 # delete all exercise folders (those w/README.md)
