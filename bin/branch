@@ -22,7 +22,7 @@ ROOT=$BIN.. # repo root
 pushd $ROOT
 git checkout master
 git pull
-git checkout -b $BRANCH
+git checkout -b $BRANCH || exit
 
 # delete all exercise folders (those w/README.md)
 for D in `ls -d $ROOT/*/`; do
@@ -32,8 +32,8 @@ for D in `ls -d $ROOT/*/`; do
 done;
 
 # reset/checkout the folders we want
-eval "git reset HEAD $FOLDERS"
-eval "git checkout -- $FOLDERS"
+eval "git reset HEAD $FOLDERS" || exit
+eval "git checkout -- $FOLDERS" || exit
 
 # generate the readme
 $BIN/readme
