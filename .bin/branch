@@ -36,10 +36,11 @@ eval "git reset HEAD $FOLDERS"
 eval "git checkout -- $FOLDERS"
 
 # generate the readme
-$BIN/readme
+$BIN/readme > $ROOT/README.md
 
 # make it so
-git commit -am "creating new assessment $BRANCH"
+git add $ROOT/README.md
+git commit -m "creating new assessment $BRANCH"
 git push
 git checkout master
 popd

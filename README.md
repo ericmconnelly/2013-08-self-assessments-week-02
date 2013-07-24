@@ -60,7 +60,7 @@ var hasDuplicates = function (array){
 ```
 
 
-## 5. Algorithms
+## Algorithms
 
 * Write a function that, given a string, returns the first duplicated letter.
   * Extra credit: Return an array of all duplicated letters.
@@ -186,6 +186,10 @@ Suppose you are provided with a `query()` function that can retrieve data from a
   * Using your definitions, write code needed to build & save a new user
 
 
+## Recursion
+* Write a function that accepts a DOM element as input and returns whether or not the element contains five or more `div` elements.
+
+
 ## Recursion - 15 minutes
   * Print every number in an array of numbers, using recursion, not loops.
 
@@ -194,7 +198,7 @@ Suppose you are provided with a `query()` function that can retrieve data from a
 * Given a working tree data structure implement a `.search()` method that uses recursion to find the number of times a given payload appears in the tree.
 
 
-## 2. Regular Expressions
+## Regular Expressions
 * Write a simple regex that matches valid dates in the format mm/dd/yyyy. The month and the day might be one digit or two.
 
 
@@ -253,7 +257,7 @@ Suppose you are provided with a `query()` function that can retrieve data from a
     * Example: `_.filter([3,4,5,6], function(number){ return number % 2; })` returns `[3,5]`
 
 
-## 6. Underscore
+## Underscore
 * Write out the steps in English to perform the action done by `_.each()`.
 * Test drive and implement `_.map()` and `_.uniq()`
 

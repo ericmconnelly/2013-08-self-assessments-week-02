@@ -1,4 +1,4 @@
-## 5. Algorithms
+## Algorithms
 
 * Write a function that, given a string, returns the first duplicated letter.
   * Extra credit: Return an array of all duplicated letters.
