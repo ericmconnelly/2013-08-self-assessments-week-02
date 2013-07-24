@@ -1,11 +1,20 @@
 #! /usr/bin/env zsh
 
 #
+# Creates a new assessment branch.
+#
 
+# name of the new assessment branch
 BRANCH=$1
+
+# folders to be included in the new assessment
 FOLDERS="${@:2:$#}"
 ME=`basename $0`
+
+# bin dir
 BIN=${"${0:A}"%$ME}
+
+# assessment repo root
 ROOT=$BIN..
 
 pushd $ROOT
@@ -13,17 +22,21 @@ git checkout master
 git pull
 git checkout -b $BRANCH
 
+# delete all exercise folders (those w/README.md)
 for D in `ls -d $ROOT/*/`; do
     if [ -e $D/README.md ]; then
         git rm -r $D
     fi;
 done;
 
-git reset HEAD $FOLDERS
-git checkout -- $FOLDERS
+# reset/checkout the folders we want
+eval "git reset HEAD $FOLDERS"
+eval "git checkout -- $FOLDERS"
 
+# generate the readme
 $BIN/readme
 
+# make it so
 git commit -am "creating new assessment $BRANCH"
 git push
 popd
