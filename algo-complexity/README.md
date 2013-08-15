@@ -1,7 +1,6 @@
-## Algorithms - 30 minutes
-
-* List and briefly describe the types of algorithmic complexity. Be as clear and complete as necessary to demonstrate your mastery.
-* What time complexity do the following three functions have (with respect to the size of the input `array`)?
+## Algorithm Complexity
+* [ ] List and briefly describe the types of algorithmic complexity. Be as clear and complete as necessary to demonstrate your mastery.
+* [ ] What time complexity do the following three functions have (with respect to the size of the input `array`)?
 
 ```
 var retrieve = function (key, array){
