@@ -1,4 +1,5 @@
 # week 0
+./.bin/branch week-0 underbar-each-defaults-once-contains recursion-divs
 
 # week 01
 ./.bin/branch week-01 underbar-reduceright js-array-extensions ds-stack ds-hash-table ds-stack-queue-diff
