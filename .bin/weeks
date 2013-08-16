@@ -1,0 +1,7 @@
+# week 0
+
+# week 01
+./.bin/branch week-01 underbar-reduceright js-array-extensions ds-stack ds-hash-table ds-stack-queue-diff
+
+# week 02
+./.bin/branch week-02 algo-complexity algo-find-dup-char js-inheritance-psudeo-classical html-jquery-color d3
