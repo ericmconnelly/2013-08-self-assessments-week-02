@@ -21,14 +21,4 @@ var sortedArrayContainsItem = function (array, item){
   var halfOfArray = item < array [center] ? array.slice (0, center) : array.slice (center);
   return sortedArrayContainsItem (halfOfArray, item);
 };
-
-var hasDuplicates = function (array){
-  for (var i = 0; i < array.length; i++){
-    var item = array [i];
-    if (array.slice (i+1).indexOf (item) === -1){
-      return true;
-    }
-  }
-  return false;
-};
 ```
