@@ -1,6 +1,6 @@
 ## Underbar
-* Implement:
-  * _.each
-  * _.defaults
-  * _.once
-  * _.contains
+* Implement the following functions:
+  * [ ] `.each`
+  * [ ] `.defaults`
+  * [ ] `.once`
+  * [ ] `.contains`
