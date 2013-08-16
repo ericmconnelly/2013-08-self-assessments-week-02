@@ -23,10 +23,9 @@ In the `requests.js` file provided:
 * Include success & error functions for both, which log the status of the request to the console.
 
 
-## Algorithms - 30 minutes
-
-* List and briefly describe the types of algorithmic complexity. Be as clear and complete as necessary to demonstrate your mastery.
-* What time complexity do the following three functions have (with respect to the size of the input `array`)?
+## Algorithm Complexity
+* [ ] List and briefly describe the types of algorithmic complexity. Be as clear and complete as necessary to demonstrate your mastery.
+* [ ] What time complexity do the following three functions have (with respect to the size of the input `array`)?
 
 ```
 var retrieve = function (key, array){
@@ -47,24 +46,13 @@ var sortedArrayContainsItem = function (array, item){
   var halfOfArray = item < array [center] ? array.slice (0, center) : array.slice (center);
   return sortedArrayContainsItem (halfOfArray, item);
 };
-
-var hasDuplicates = function (array){
-  for (var i = 0; i < array.length; i++){
-    var item = array [i];
-    if (array.slice (i+1).indexOf (item) === -1){
-      return true;
-    }
-  }
-  return false;
-};
 ```
 
 
 ## Algorithms
-
-* Write a function that, given a string, returns the first duplicated letter.
+* [ ] Write a function that, given a string, returns the first duplicated letter.
   * Extra credit: Return an array of all duplicated letters.
-  * List and briefly describe the types of algorithmic complexity. Be as clear and complete as necessary to demonstrate your mastery.
+* [ ] Include a comment near the end of the file stating what complexity you believe your solution to be.
 
 
 ## Algorithms
@@ -85,6 +73,11 @@ var hasDuplicates = function (array){
   * Note: if you would like to enable source maps in the chrome console, click the gear to open the settings, then make sure `Source Maps` is checked. Source maps will show you line errors corresponding to your CoffeeScript files. This is an optional step to aid in debugging.
 
 
+## D3
+* [ ] Add a comment for each line in `d3_sample.js`. If you run up against a method call you haven't seen before, feel free to look up what it does -- but explain it in your own words.
+
+
+
 # Drawing Data Structures
 - Using [draw.io](http://draw.io) create visual representations of the following data structures:
   * linked list
@@ -95,27 +88,31 @@ Export and commit each image.
 
 
 ## Hash Table Collision Resolution
-*
-Implement collision resolution for the working hash table in `hashTable.js`
+* [ ] Implement collision resolution for the working hash table in `hashTable.js`
 
 
-## Data Structures - 20 minutes
-  * [] Implement a queue class.
-    * You can use an array for storage, **AND** delegate to its methods
-    * Instances of your queue class should have a `.add ()` method
-      * accepts any value as input, and adds it to private storage
-    * Instances of your queue class should have a `.remove ()` method
-      * returns the most recently added value that has not already been removed
-    * [] The queue should have no methods or properties other than `.add` and `.remove`
-      * You can test this by calling `Object.keys ()` on your queue instance
-    * The queue should clean up references to values that it no longer needs.
+## Queue
+* [ ] Implement a queue class.
+  * You can use an array for storage, and delegate to its methods
+  * The stack should only have `.add` and `.remove`, no other properties or methods (you can test this by calling Object.keys() on your stack instance)
+  * The queue should clean up references to values that it no longer needs.
+
+
+## Data Structures
+* [ ] Describe the difference between a stack and a queue and give examples of when you might use them.
 
 
 ## Stack
-* Implement a stack class.
+* [ ] Implement a stack class.
   * You can use an array for storage, and delegate to its methods
-  * The stack should only have .add() and .remove(), no other properties or methods
-    * You can test this by calling Object.keys() on your stack instance
+  * The stack should only have `.add` and `.remove`, no other properties or methods (you can test this by calling Object.keys() on your stack instance).
+
+
+## HTML/jQuery
+The included index.html contains two paragraph tags, each containing a block of lorem ipsum text.
+* [ ] Given the `<script>` tag at the bottom of the body and write a function that wraps every word in its own `<span>` tag.
+* [ ] Make each word change color once per second to a random color.
+
 
 
 ## HTML/CSS basics
@@ -134,15 +131,13 @@ Create a simple HTML page with a jQuery click event.
 
 
 ## Instantiation Patterns
-
-* Extend the native `Array` class to have these useful functions:
+* [ ] Extend the native `Array` class to have these useful functions:
   * `.first` - Returns the first element of the array
   * `.last` - Returns the last element of the array
 
 
 ## Inheritance Patterns
-The included class `SmartPhone` and its parent class `Phone` are written in the functional instantiation style.
-  * Refactor them to be written in the pseudo-classical style (using the keyword `new`), including shared methods.
+* [ ] The included class `SmartPhone` and its parent class `Phone` are written in the functional instantiation style. Refactor them to be written in the pseudo-classical style (using the keyword `new`), including shared methods.
 
 
 ## Javascript basics
@@ -263,8 +258,7 @@ Suppose you are provided with a `query()` function that can retrieve data from a
 
 
 ## Underbar
-
-* Implement a `reduceRight` function
+* [ ] Implement a `reduceRight` function
   * Do not use any external function calls (even to helpers) within your implementation.
   * `reduceRight` behaves much the same as `_.reduce`, but traverses the target in the opposite direction.
   * Note: your function only needs to work correctly on arrays.
