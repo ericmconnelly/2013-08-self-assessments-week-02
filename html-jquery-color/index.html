@@ -16,10 +16,16 @@
       $(function(){
         /* A function that wraps each word of the above paragraphs in span tags */
         // solution goes here
+        text = $('p').text().split(' ');
+        $.each(text function(index, value) {
+          text[index] = '<span' + ' ' + 'class = ' + value + '>' + value + '</span>';
+        }
+
+        $('p').html(text.join(' '));
 
         /* Change spans to random colors, once per second */
         setInterval(function() {
-          // solution goes here
+          $('span').attr('color', )
         }, 1000);
       });
     </script>

@@ -1,2 +1,21 @@
-Please delete me & write your explanation...
+Types of Algorithmic Complexity:
 
+constant: As the number of tasks increases the computing time required to execute those tasks in entirety remains the same.
+
+Linear: Every increase in the number of tasks is met with a proportional increase in the computing time that it requires to complete the entire job.
+
+Exponential: Increasing the number of tasks increases the rate of growth in the amount of time it takes to compute the entire job. Accordingly, adding a 4th task requires a larger increase in computing time than adding a 3rd.
+
+Logarithmic: Increasing the number of tasks decreases the rate of growth in the amount of time it takes to compute the entire job. The significance of adding more tasks diminishes as they are added.
+
+
+Complexity for each algorithm:
+
+1. Retrieve:
+Linear. There is a task that must be completed for every letter in the key, irrespective of the number of letters. Adding another letter requires the same task to be performed as the letter before it.
+
+2. sortedArrayContainsItem:
+Logarithmic. Every operation decreases the scale of the problem by half. 
+
+3. hasDuplicates:
+Exponential. The entire string is being iterated over, and for every letter, the string up until that point is being iterated over again. This means that the process gets more time intensive for every letter added to the string.
